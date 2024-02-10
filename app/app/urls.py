@@ -18,6 +18,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]  
+]
 
-one=1234323231
+one =1234323231
