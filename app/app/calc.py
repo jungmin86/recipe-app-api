@@ -3,6 +3,5 @@ Calculator functions
 """
 
 def add(x, y):
-    """Add x and y and return result.
-    """
+    """ Adding x and y """
     return x + y
