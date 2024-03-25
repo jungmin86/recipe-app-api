@@ -2,5 +2,5 @@
 
 set -e
 
-envsubst < /etc/ngingx/default.conf.tpl > /etc/nginx/conf.d/default.conf
-ngingx -g 'daemon off;'
+envsubst < /etc/nginx/default.conf.tpl > /etc/nginx/conf.d/default.conf
+nginx -g 'daemon off;'
