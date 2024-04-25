@@ -1,10 +1,14 @@
 """
 Core views for app.
 """
-from rest_framework.decorators import api_view
+from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
+from .serializers import HealthCheckSerializer
 
 
-@api_view(["GET"])
-def health_check(request):
-    return Response({"healthy": True})
+class HealthCheckAPIView(GenericAPIView):
+    serializer_class = HealthCheckSerializer
+
+    def get(self, request):
+        data = {"healthy": True}
+        return Response(data)
